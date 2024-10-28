@@ -45,7 +45,7 @@ class Server:
         Returns:
             Dict[str, Any]: Dictionary with the page details and dataset.
         """
-        assert index is not None and 0 <= index < len(self.indexed_dataset()), \
+        assert index is not None and 0 <= index < len(self.indexed_dataset()),\
             "Index out of range"
         indexed_dataset = self.indexed_dataset()
 
