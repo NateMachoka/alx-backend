@@ -3,6 +3,7 @@
 
 from base_caching import BaseCaching
 
+
 class MRUCache(BaseCaching):
     """MRUCache defines a Most Recently Used (MRU) caching system."""
 
