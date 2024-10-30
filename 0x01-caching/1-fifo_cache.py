@@ -26,6 +26,8 @@ class FIFOCache(BaseCaching):
 
         # add new key and item
         self.cache_data[key] = item
+        if key in self.order:
+            self.order.remove(key)
         self.order.append(key)
 
     def get(self, key):
