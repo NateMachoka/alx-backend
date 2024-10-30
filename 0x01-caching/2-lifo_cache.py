@@ -23,8 +23,10 @@ class LIFOCache(BaseCaching):
             print(f"DISCARD: {last_key}")
 
         self.cache_data[key] = item
-        self.order.append(key)  # Update last_key to the current key
+        if key in self.order:
+            self.order.remove(key)
+        self.order.append(key)
 
     def get(self, key):
         """ Get an item by key """
-        return self.cache_date.get(key, None)
+        return self.cache_data.get(key, None)
