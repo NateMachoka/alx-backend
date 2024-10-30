@@ -3,6 +3,7 @@
 
 from base_caching import BaseCaching
 
+
 class LFUCache(BaseCaching):
     """LFUCache defines a Least Frequently Used (LFU) caching system."""
 
@@ -21,10 +22,10 @@ class LFUCache(BaseCaching):
         if key in self.cache_data:
             self.cache_data[key] = item
             self.frequency[key] += 1  # Increase the frequency count
-            self.order.remove(key)  # Update order to make it most recently used
+            self.order.remove(key)  # Update order to mru
             self.order.append(key)
         else:
-            # If cache is full, we need to remove the least frequently used item
+            # If cache is full, we need to remove the lfu item
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 # Find the least frequently used item(s)
                 min_freq = min(self.frequency.values())
