@@ -28,6 +28,7 @@ class Config:
 
 app.config.from_object(Config)
 
+
 def get_user() -> dict:
     """Return a user dictionary based on login_as query parameter."""
     user_id = request.args.get('login_as')
