@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-A simple Flask app with user login emulation and internationalization support."""
+A simple Flask app with user login emulation and internationalization support.
+"""
 
 from flask import Flask, render_template, request, g
 from flask_babel import Babel, _
@@ -38,7 +39,9 @@ def get_user() -> dict:
 
 @app.before_request
 def before_request() -> None:
-    """Set the user based on the login_as parameter before handling the request."""
+    """
+    Set the user based on the login_as parameter before handling the request.
+    """
     g.user = get_user()
 
 
