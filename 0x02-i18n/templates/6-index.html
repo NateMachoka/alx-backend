@@ -2,10 +2,11 @@
 <html lang="{{ get_locale() }}">
 <head>
     <meta charset="UTF-8">
-    <title>User Login Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
 </head>
 <body>
-    <h1>{{ _('Welcome to the User Login Example!') }}</h1>
+    <h1>{{ _('Welcome') }}</h1>
     <p>
         {% if g.user %}
             {{ _('You are logged in as %(username)s.', username=g.user['name']) }}
