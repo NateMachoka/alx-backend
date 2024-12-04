@@ -1,0 +1,13 @@
+node_modules/
+
+redis-6.0.10
+deps/
+src/
+dump.rdb
+redis.conf
+sentinel.conf
+runtest*
+*.o
+*.so
+package-lock.json
+*~
